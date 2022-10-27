@@ -2,7 +2,7 @@ import React from 'react';
 import s from './ContactList.module.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { delContact } from 'redux/operations';
+import { delContact } from 'redux/contactsThunk';
 
 export default function ContactListItem({ name, phone, id }) {
   const dispatch = useDispatch();

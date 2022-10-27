@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contactsThunk';
 import s from './ContactForm.module.css';
 import { useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
@@ -37,7 +37,6 @@ export default function ContactForm() {
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
-      // const queryContacts = contacts.
       return alert(`${name} is already in contacts.`);
     }
 
